@@ -1,4 +1,4 @@
-const API_URL = "https://contacthub-4si7.onrender.com/api";
+const API_URL = "https://contacthub-4si7.onrender.com/api/contacts";
 const token = localStorage.getItem("token");
 const params = new URLSearchParams(window.location.search);
 const selectedGroup = params.get("group");

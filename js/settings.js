@@ -4,7 +4,7 @@ if (!token) {
     window.location.href = "login.html";
 }
 
-const API_URL = "https://contacthub-4si7.onrender.com/api";
+const API_URL = "https://contacthub-4si7.onrender.com/api/users";
 
 const profilePreview = document.getElementById("profilePreview");
 const profileImage = document.getElementById("profileImage");
