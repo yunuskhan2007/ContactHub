@@ -1,0 +1,716 @@
+/* =====================================================
+   VIEW CONTACT
+===================================================== */
+
+/* ========================================= */
+/* HEADER BUTTONS */
+/* ========================================= */
+
+.header-right{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.btn-secondary{
+
+    background:#EEF2FF;
+    color:#4F46E5;
+    border:none;
+}
+
+.btn-secondary:hover{
+
+    background:#E0E7FF;
+}
+
+.btn-danger{
+
+    background:#EF4444;
+    color:#fff;
+    border:none;
+}
+
+.btn-danger:hover{
+
+    background:#DC2626;
+}
+
+/* ========================================= */
+/* PROFILE CARD */
+/* ========================================= */
+
+.profile-card{
+
+    background:#fff;
+
+    border-radius:25px;
+
+    padding:40px;
+
+    text-align:center;
+
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+
+    margin-bottom:35px;
+
+    animation:fadeUp .5s ease;
+}
+
+.profile-card img{
+
+    width:140px;
+    height:140px;
+
+    border-radius:50%;
+
+    border:5px solid #EEF2FF;
+
+    object-fit:cover;
+
+    transition:.3s;
+}
+
+.profile-card img:hover{
+
+    transform:scale(1.05);
+}
+
+.profile-card h2{
+
+    margin-top:20px;
+
+    font-size:2rem;
+
+    color:#111827;
+}
+
+/* ========================================= */
+/* GROUP BADGE */
+/* ========================================= */
+
+.group-badge{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    margin-top:15px;
+
+    padding:8px 18px;
+
+    border-radius:999px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    font-weight:600;
+}
+
+/* ========================================= */
+/* PROFILE ACTIONS */
+/* ========================================= */
+
+.profile-actions{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:18px;
+
+    margin-top:30px;
+}
+
+.profile-actions button{
+
+    width:52px;
+    height:52px;
+
+    border:none;
+
+    border-radius:14px;
+
+    background:#F3F4F6;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    font-size:1rem;
+}
+
+.profile-actions button:hover{
+
+    transform:translateY(-4px);
+
+    color:#fff;
+}
+
+.profile-actions button:nth-child(1):hover{
+
+    background:#10B981;
+}
+
+.profile-actions button:nth-child(2):hover{
+
+    background:#3B82F6;
+}
+
+.profile-actions button:nth-child(3):hover{
+
+    background:#F59E0B;
+}
+
+.profile-actions button:nth-child(4):hover{
+
+    background:#EF4444;
+}
+
+/* ========================================= */
+/* DETAILS GRID */
+/* ========================================= */
+
+.details-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+
+    gap:25px;
+
+    margin-bottom:40px;
+}
+/* ========================================= */
+/* INFO CARDS */
+/* ========================================= */
+
+.info-card{
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:28px;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.07);
+
+    transition:.3s;
+}
+
+.info-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0 16px 35px rgba(0,0,0,.10);
+}
+
+.info-card h3{
+
+    font-size:1.2rem;
+
+    font-weight:700;
+
+    color:#111827;
+
+    margin-bottom:25px;
+
+    padding-bottom:15px;
+
+    border-bottom:1px solid #E5E7EB;
+}
+
+/* ========================================= */
+/* INFO ITEMS */
+/* ========================================= */
+
+.info-item{
+
+    display:flex;
+
+    align-items:flex-start;
+
+    gap:18px;
+
+    margin-bottom:22px;
+}
+
+.info-item:last-child{
+
+    margin-bottom:0;
+}
+
+.info-item i{
+
+    width:50px;
+
+    height:50px;
+
+    border-radius:14px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:18px;
+
+    flex-shrink:0;
+}
+
+.info-item div{
+
+    flex:1;
+}
+
+.info-item label{
+
+    display:block;
+
+    font-size:.85rem;
+
+    color:#6B7280;
+
+    margin-bottom:6px;
+
+    font-weight:600;
+}
+
+.info-item p{
+
+    font-size:1rem;
+
+    color:#111827;
+
+    font-weight:500;
+
+    line-height:1.6;
+
+    word-break:break-word;
+}
+
+/* ========================================= */
+/* NOTES */
+/* ========================================= */
+
+.notes{
+
+    color:#4B5563;
+
+    line-height:1.8;
+
+    font-size:.97rem;
+
+    text-align:justify;
+}
+
+/* ========================================= */
+/* ACTIVITY */
+/* ========================================= */
+
+.activity-list{
+
+    list-style:none;
+
+    padding:0;
+
+    margin:0;
+}
+
+.activity-list li{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:14px 0;
+
+    border-bottom:1px solid #F3F4F6;
+
+    color:#374151;
+
+    font-weight:500;
+}
+
+.activity-list li:last-child{
+
+    border-bottom:none;
+}
+
+.activity-list i{
+
+    width:40px;
+
+    height:40px;
+
+    border-radius:12px;
+
+    background:#EEF2FF;
+
+    color:#4F46E5;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    flex-shrink:0;
+}
+
+/* ========================================= */
+/* CARD ANIMATION */
+/* ========================================= */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+    }
+}
+
+.info-card{
+
+    animation:fadeUp .5s ease;
+}
+/* ========================================= */
+/* FLOATING EDIT BUTTON */
+/* ========================================= */
+
+.floating-btn{
+
+    position:fixed;
+
+    right:30px;
+
+    bottom:30px;
+
+    width:65px;
+
+    height:65px;
+
+    border-radius:50%;
+
+    background:#4F46E5;
+
+    color:#FFFFFF;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    font-size:22px;
+
+    text-decoration:none;
+
+    box-shadow:0 12px 30px rgba(79,70,229,.35);
+
+    transition:.3s;
+
+    z-index:1000;
+}
+
+.floating-btn:hover{
+
+    transform:translateY(-6px) scale(1.05);
+
+    background:#4338CA;
+}
+
+/* ========================================= */
+/* DELETE MODAL */
+/* ========================================= */
+
+.delete-modal{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.45);
+
+    display:none;
+
+    align-items:center;
+
+    justify-content:center;
+
+    z-index:2000;
+
+    padding:20px;
+}
+
+.delete-modal.active{
+
+    display:flex;
+}
+
+.modal-content{
+
+    width:100%;
+
+    max-width:420px;
+
+    background:#FFFFFF;
+
+    border-radius:22px;
+
+    padding:35px;
+
+    text-align:center;
+
+    animation:popup .3s ease;
+}
+
+.modal-content h2{
+
+    margin-bottom:15px;
+
+    color:#111827;
+}
+
+.modal-content p{
+
+    color:#6B7280;
+
+    line-height:1.7;
+
+    margin-bottom:30px;
+}
+
+.modal-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+}
+
+.modal-buttons button{
+
+    min-width:130px;
+
+    padding:12px 20px;
+
+    border:none;
+
+    border-radius:12px;
+
+    font-size:.95rem;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.modal-buttons .btn-secondary{
+
+    background:#E5E7EB;
+
+    color:#374151;
+}
+
+.modal-buttons .btn-secondary:hover{
+
+    background:#D1D5DB;
+}
+
+.modal-buttons .btn-danger{
+
+    background:#EF4444;
+
+    color:#FFFFFF;
+}
+
+.modal-buttons .btn-danger:hover{
+
+    background:#DC2626;
+}
+
+/* ========================================= */
+/* RESPONSIVE */
+/* ========================================= */
+
+@media (max-width:992px){
+
+    .profile-card{
+
+        padding:30px 20px;
+    }
+
+    .details-grid{
+
+        grid-template-columns:1fr;
+    }
+
+    .header-right{
+
+        flex-wrap:wrap;
+
+        justify-content:flex-start;
+    }
+}
+
+@media (max-width:768px){
+
+    .profile-card img{
+
+        width:110px;
+
+        height:110px;
+    }
+
+    .profile-card h2{
+
+        font-size:1.6rem;
+    }
+
+    .profile-actions{
+
+        flex-wrap:wrap;
+
+        gap:12px;
+    }
+
+    .profile-actions button{
+
+        width:48px;
+
+        height:48px;
+    }
+
+    .info-card{
+
+        padding:22px;
+    }
+
+    .info-item{
+
+        gap:14px;
+    }
+
+    .info-item i{
+
+        width:42px;
+
+        height:42px;
+
+        font-size:16px;
+    }
+
+    .floating-btn{
+
+        width:58px;
+
+        height:58px;
+
+        right:20px;
+
+        bottom:20px;
+    }
+}
+
+@media (max-width:480px){
+
+    .profile-card{
+
+        padding:25px 18px;
+    }
+
+    .profile-card h2{
+
+        font-size:1.35rem;
+    }
+
+    .group-badge{
+
+        font-size:.85rem;
+
+        padding:7px 14px;
+    }
+
+    .info-card{
+
+        padding:18px;
+    }
+
+    .info-item{
+
+        flex-direction:column;
+
+        align-items:flex-start;
+    }
+
+    .info-item i{
+
+        margin-bottom:8px;
+    }
+
+    .modal-content{
+
+        padding:25px;
+    }
+
+    .modal-buttons{
+
+        flex-direction:column;
+    }
+
+    .modal-buttons button{
+
+        width:100%;
+    }
+}
+
+/* ========================================= */
+/* POPUP ANIMATION */
+/* ========================================= */
+
+@keyframes popup{
+
+    from{
+
+        opacity:0;
+
+        transform:scale(.85);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:scale(1);
+    }
+}

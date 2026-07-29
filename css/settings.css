@@ -1,0 +1,479 @@
+/* ==========================================
+   SETTINGS PAGE
+========================================== */
+
+.settings-card {
+
+    background: #fff;
+
+    border-radius: 18px;
+
+    padding: 28px;
+
+    margin-bottom: 30px;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+
+}
+
+.section-title {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+}
+
+.section-title i {
+
+    font-size: 22px;
+
+    color: #2563eb;
+
+}
+
+.section-title h2 {
+
+    font-size: 22px;
+
+    color: #222;
+
+}
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile-area {
+
+    display: flex;
+
+    gap: 40px;
+
+    align-items: flex-start;
+
+}
+
+.profile-image{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:15px;
+    margin-top:25px;
+
+}
+
+.profile-details {
+
+    flex: 1;
+
+}
+
+/* ==========================================
+   FORM
+========================================== */
+
+.form-group {
+
+    display: flex;
+
+    flex-direction: column;
+
+    margin-bottom: 18px;
+
+}
+
+.form-group label {
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+
+    color: #444;
+
+}
+
+.form-group input {
+
+    width: 100%;
+
+    padding: 12px 16px;
+
+    border: 1px solid #dcdcdc;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+.form-group input:focus {
+
+    border-color: #2563eb;
+
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+
+}
+
+/* ==========================================
+   BUTTON
+========================================== */
+
+.btn {
+
+    padding: 12px 24px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    cursor: pointer;
+
+    font-size: 15px;
+
+    font-weight: 600;
+
+}
+
+.btn-primary {
+
+    background: #2563eb;
+
+    color: white;
+
+    transition: .3s;
+
+}
+
+.btn-primary:hover {
+
+    background: #1d4ed8;
+
+}
+.btn-danger{
+
+    margin-top:12px;
+
+    background:#EF4444;
+
+    color:#fff;
+
+    border:none;
+
+}
+
+.btn-danger:hover{
+
+    background:#DC2626;
+
+}
+/* ==========================================
+   PASSWORD
+========================================== */
+
+.password-form {
+
+    max-width: 600px;
+
+}
+
+/* ==========================================
+   ABOUT
+========================================== */
+
+.about-content {
+
+    line-height: 1.9;
+
+    color: #444;
+
+    font-size: 15px;
+
+}
+
+.about-content p {
+
+    margin-bottom: 12px;
+
+}
+
+.about-content strong {
+
+    color: #111827;
+
+}
+
+/* ===========================
+   Responsive Design
+=========================== */
+
+.profile-area{
+
+    display:flex;
+    gap:40px;
+    align-items:flex-start;
+
+}
+
+.profile-image{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    flex-shrink:0;
+
+}
+
+.profile-image img{
+
+    width:120px;
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+}
+
+.profile-details{
+
+    flex:1;
+    width:100%;
+
+}
+
+.profile-details .btn{
+
+    margin-top:20px;
+
+}
+
+/* ===========================
+   Tablet
+=========================== */
+
+@media (max-width:992px){
+
+    .main-content{
+
+        padding:25px;
+
+    }
+
+    .profile-area{
+
+        flex-direction:column;
+        align-items:center;
+
+    }
+
+    .profile-image{
+
+        margin-bottom:25px;
+
+    }
+
+    .profile-details{
+
+        width:100%;
+
+    }
+
+    #saveProfile{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===========================
+   Mobile
+=========================== */
+
+@media (max-width:768px){
+
+    .sidebar{
+
+        position:fixed;
+
+        left:-260px;
+
+        transition:.3s;
+
+        z-index:1000;
+
+    }
+
+    .sidebar.active{
+
+        left:0;
+
+    }
+
+    .main-content{
+
+        margin-left:0;
+
+        width:100%;
+
+        padding:18px;
+
+    }
+
+    .dashboard-header h1{
+
+        font-size:32px;
+
+    }
+
+    .dashboard-header p{
+
+        font-size:15px;
+
+    }
+
+    .settings-card{
+
+        padding:22px;
+
+    }
+
+    .profile-image img{
+
+        width:100px;
+
+        height:100px;
+
+    }
+
+    .form-group input,
+    .form-group textarea{
+
+        font-size:15px;
+
+    }
+
+    #uploadBtn{
+
+        width:100%;
+
+    }
+
+    #saveProfile{
+
+        width:100%;
+
+    }
+
+    .password-form .btn{
+
+        width:100%;
+
+    }
+
+}
+
+/* ===========================
+   Small Phones
+=========================== */
+
+@media (max-width:480px){
+
+    .dashboard-header h1{
+
+        font-size:28px;
+
+    }
+
+    .dashboard-header p{
+
+        font-size:14px;
+
+    }
+
+    .settings-card{
+
+        padding:18px;
+
+        border-radius:18px;
+
+    }
+
+    .section-title h2{
+
+        font-size:22px;
+
+    }
+
+    .profile-image img{
+
+        width:90px;
+
+        height:90px;
+
+    }
+
+    .profile-details input,
+    .profile-details textarea{
+
+        padding:12px;
+
+        font-size:14px;
+
+    }
+
+    #uploadBtn{
+
+        font-size:14px;
+
+    }
+
+    #saveProfile{
+
+        font-size:15px;
+
+    }
+
+}
+.password-box{
+
+    position: relative;
+    width: 100%;
+
+}
+
+.password-box input{
+
+    width: 100%;
+    padding-right: 45px;
+    box-sizing: border-box;
+
+}
+
+.password-box i{
+
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #777;
+    z-index: 10;
+
+}
+
+.password-box i:hover{
+
+    color: #4F46E5;
+
+}

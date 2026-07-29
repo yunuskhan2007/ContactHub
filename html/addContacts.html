@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Add Contact | ContactHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/addContacts.css">
+    <link rel="stylesheet" href="../css/toast.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+ <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-address-book"></i>
+
+            <span>ContactHub</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="contacts.html">
+                    <i class="fa-solid fa-address-book"></i>
+                    Contacts
+                </a>
+            </li>
+
+            <li>
+                <a href="favorites.html">
+                    <i class="fa-solid fa-star"></i>
+                    Favorites
+                </a>
+            </li>
+
+            <li>
+                <a href="groups.html">
+                    <i class="fa-solid fa-users"></i>
+                    Groups
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Companies
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+    <!-- Main -->
+
+    <main class="main-content">
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>Add Contact</h1>
+
+                <p>Create a new contact.</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <a href="contacts.html" class="btn btn-secondary">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back
+
+                </a>
+
+            </div>
+
+        </header>
+
+        <section class="add-contact-card">
+
+            <form id="contactForm">
+
+                <!-- Image Upload -->
+
+                <div class="image-upload">
+
+                    <img
+                        src="https://ui-avatars.com/api/?name=User&background=4F46E5&color=fff"
+                        id="previewImage">
+
+                    <input
+                        type="file"
+                        id="contactImage"
+                        accept="image/*"
+                        hidden>
+
+                    <button
+                        type="button"
+                        id="uploadBtn"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Upload Photo
+
+                    </button>
+
+                </div>
+
+                <div class="form-grid">
+
+                    <div class="form-group">
+
+                        <label>Full Name *</label>
+
+                        <input
+                            type="text"
+                            id="contactName"
+                            placeholder="e.g. John Doe"
+                            required>
+
+                        <small class="error"></small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email Address</label>
+
+                        <input
+                            type="email"
+                            id="contactEmail"
+                            placeholder="e.g. john@gmail.com">
+
+                        <small class="error"></small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Phone Number *</label>
+
+                        <input
+                            type="tel"
+                            id="contactPhone"
+                            placeholder="e.g. +91 9876543210"
+                            required>
+
+                        <small class="error"></small>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Company</label>
+
+                        <input
+                            type="text"
+                            id="contactCompany"
+                            placeholder="e.g. Google India Pvt. Ltd.">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Job Title</label>
+
+                        <input
+                            type="text"
+                            id="contactJob"
+                            placeholder="e.g. Software Engineer">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Group</label>
+
+                        <select id="contactGroup">
+
+                            <option value="">Select Group</option>
+
+                            <option>Friends</option>
+
+                            <option>Family</option>
+
+                            <option>College</option>
+
+                            <option>Work</option>
+
+                            <option>Clients</option>
+
+                            <option>Others</option>
+
+                        </select>
+
+                    </div>
+                                        <div class="form-group full-width">
+
+                        <label>Address</label>
+
+                        <textarea
+                            id="contactAddress"
+                            rows="3"
+                            placeholder="e.g. Mumbai, Maharashtra"></textarea>
+
+                    </div>
+
+                    <div class="form-group full-width">
+
+                        <label>Notes</label>
+
+                        <textarea
+                            id="contactNotes"
+                            rows="5"
+                            maxlength="500"
+                            placeholder="Add notes about this contact..."></textarea>
+
+                        <small id="noteCounter">0 / 500</small>
+
+                    </div>
+
+                </div>
+
+                <!-- Favorite -->
+
+                <div class="favorite-wrapper">
+
+                    <label class="favorite-toggle">
+
+                        <input
+                            type="checkbox"
+                            id="favoriteToggle">
+
+                        <span class="slider"></span>
+
+                        <span class="favorite-text">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            Mark as Favorite
+
+                        </span>
+
+                    </label>
+
+                </div>
+
+                <!-- Buttons -->
+
+                <div class="form-buttons">
+
+                    <a
+                        href="contacts.html"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-arrow-left"></i>
+
+                        Cancel
+
+                    </a>
+
+                    <button
+                        type="reset"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-rotate-left"></i>
+
+                        Reset
+
+                    </button>
+
+                    <button
+                        type="submit"
+                        id="saveContactBtn"
+                        class="btn btn-primary">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Contact
+
+                    </button>
+
+                </div>
+
+            </form>
+
+        </section>
+
+    </main>
+
+    <!-- Success Toast -->
+
+    <div class="toast" id="toast">
+
+        <i class="fa-solid fa-circle-check"></i>
+
+        <span>
+
+            Contact added successfully!
+
+        </span>
+
+    </div>
+
+    <!-- Loading -->
+
+    <div class="loader" id="loader">
+
+        <div class="spinner"></div>
+
+    </div>
+
+    <script src="../js/addContacts.js"></script>
+    <script src="../js/toast.js"></script>
+
+</body>
+
+</html>

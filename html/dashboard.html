@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | ContactHub</title>
+
+   <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/toast.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-address-book"></i>
+
+            <span>ContactHub</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li class="active">
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="contacts.html">
+                    <i class="fa-solid fa-address-book"></i>
+                    Contacts
+                </a>
+            </li>
+
+            <li>
+                <a href="favorites.html">
+                    <i class="fa-solid fa-star"></i>
+                    Favorites
+                </a>
+            </li>
+
+            <li>
+                <a href="groups.html">
+                    <i class="fa-solid fa-users"></i>
+                    Groups
+                </a>
+            </li>
+            <li>
+                <a href="companies.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Companies
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-bottom">
+
+            <a href="#" class="logout" onclick="logout()">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>Dashboard</h1>
+
+                <p>Manage all your contacts in one place.</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input type="text" placeholder="Search contacts...">
+
+                </div>
+
+                <button class="icon-btn">
+
+                    <i class="fa-regular fa-bell"></i>
+
+                </button>
+
+               <div class="profile" id="profileCard">
+
+                    <img
+                        id="dashboardAvatar"
+                        src="https://ui-avatars.com/api/?name=User&background=4F46E5&color=fff"
+                        alt="Profile">
+
+                    <span id="profileName"></span>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- WELCOME -->
+
+        <section class="welcome-card">
+
+            <div>
+
+                <h2 id="welcomeText"></h2>
+
+                <p>
+
+                    Stay organized and access every contact from a single dashboard.
+
+                </p>
+
+            </div>
+
+            <a href="addContacts.html" class="btn btn-primary">
+
+                <i class="fa-solid fa-plus"></i>
+
+                Add Contact
+
+            </a>
+
+        </section>
+
+        <!-- STATS -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-address-book"></i>
+
+                <h3 id="totalContacts"></h3>
+
+                <p>Total Contacts</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-star"></i>
+
+                <h3 id="favoriteContacts"></h3>
+
+                <p>Favorites</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3 id="totalGroups"></h3>
+
+                <p>Groups</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-user-plus"></i>
+
+                <h3 id="addedToday"></h3>
+
+                <p>Added Today</p>
+
+            </div>
+
+        </section>
+
+        <!-- CONTENT -->
+
+        <section class="dashboard-grid">
+
+            <!-- RECENT CONTACTS -->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h2>
+
+                        Recent Contacts
+
+                    </h2>
+
+                    <a href="contacts.html">
+
+                        View All
+
+                    </a>
+
+                </div>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>Name</th>
+
+                            <th>Phone</th>
+
+                            <th>Email</th>
+
+                            <th></th>
+
+                        </tr>
+
+                    </thead>
+
+                   <tbody id="recentContactsBody">
+
+</tbody>
+
+                </table>
+
+            </div>
+
+            <!-- QUICK ACTIONS -->
+
+            <div class="card">
+
+                <div class="card-header">
+
+                    <h2>
+
+                        Quick Actions
+
+                    </h2>
+
+                </div>
+
+                <div class="action-buttons">
+
+                    <a href="addContacts.html" class="btn btn-primary">
+
+                        <i class="fa-solid fa-user-plus"></i>
+
+                        Add Contact
+
+                    </a>
+
+                    <button class="btn btn-secondary" id="exportBtn">
+                        <i class="fa-solid fa-file-export"></i>
+                        Export CSV
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!-- Floating Button -->
+
+    <a href="addContacts.html" class="floating-btn">
+
+        <i class="fa-solid fa-plus"></i>
+
+    </a>
+
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/toast.js"></script>
+
+</body>
+
+</html>

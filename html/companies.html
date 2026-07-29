@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Companies | ContactHub</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/companies.css">
+    <link rel="stylesheet" href="../css/toast.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= Sidebar ================= -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-address-book"></i>
+
+                <span>ContactHub</span>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="contacts.html">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                        Contacts
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="favorites.html">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        Favorites
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="groups.html">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        Groups
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="companies.html">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Companies
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="settings.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        Settings
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= Main ================= -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>Companies</h1>
+
+                <p>View all companies associated with your contacts.</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="companySearch"
+                        placeholder="Search Company...">
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!-- ================= Stats ================= -->
+
+        <section class="stats-grid">
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-building"></i>
+
+                <h3 id="totalCompanies">0</h3>
+
+                <p>Total Companies</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-users"></i>
+
+                <h3 id="totalEmployees">0</h3>
+
+                <p>Total Contacts</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-crown"></i>
+
+                <h3 id="topCompany">-</h3>
+
+                <p>Top Company</p>
+
+            </div>
+
+            <div class="stat-card">
+
+                <i class="fa-solid fa-chart-simple"></i>
+
+                <h3 id="largestCount">0</h3>
+
+                <p>Largest Team</p>
+
+            </div>
+
+        </section>
+
+               <!-- ================= Companies ================= -->
+
+        <section class="companies-grid">
+
+            <!-- JS Will Generate Company Cards -->
+
+        </section>
+
+    </main>
+
+    <!-- ================= Scripts ================= -->
+
+    <script src="../js/companies.js"></script>
+    <script src="../js/toast.js"></script>
+
+</body>
+
+</html>

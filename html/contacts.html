@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacts | ContactHub</title>
+
+    <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/contacts.css">
+<link rel="stylesheet" href="../css/toast.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+        
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-address-book"></i>
+
+            <span>ContactHub</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li class="active">
+                <a href="contacts.html">
+                    <i class="fa-solid fa-address-book"></i>
+                    Contacts
+                </a>
+            </li>
+
+            <li>
+                <a href="favorites.html">
+                    <i class="fa-solid fa-star"></i>
+                    Favorites
+                </a>
+            </li>
+
+            <li>
+                <a href="groups.html">
+                    <i class="fa-solid fa-users"></i>
+                    Groups
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Companies
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- HEADER -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>Contacts</h1>
+
+                <p>Manage your saved contacts.</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="contactSearch"
+                        
+                        placeholder="Search contact...">
+                        <select id="sortContacts" class="sort-select">
+    <option value="recent">Recently Added</option>
+    <option value="az">A → Z</option>
+    <option value="za">Z → A</option>
+</select>
+
+                </div>
+
+                <a href="addContacts.html" class="btn btn-primary">
+
+                    <i class="fa-solid fa-user-plus"></i>
+
+                    Add Contact
+
+                </a>
+
+            </div>
+
+        </header>
+       <!-- ================= CONTACTS ================= -->
+
+<section class="card">
+
+    <div class="card-header">
+
+        <h2>All Contacts</h2>
+
+        <span>245 Contacts</span>
+
+    </div>
+
+    <!-- Toolbar -->
+
+    <div class="contacts-toolbar">
+
+        <div class="toolbar-left">
+
+            <button class="filter-btn active">All</button>
+            <button class="filter-btn">Favorites</button>
+            <button class="filter-btn">Family</button>
+            <button class="filter-btn">Friends</button>
+            <button class="filter-btn">Work</button>
+
+        </div>
+
+        <div class="toolbar-right">
+
+            <button id="listViewBtn" class="toggle-view-btn active">
+
+                <i class="fa-solid fa-list"></i>
+
+            </button>
+
+            <button id="gridViewBtn" class="toggle-view-btn">
+
+                <i class="fa-solid fa-table-cells-large"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- Contact Container -->
+
+    <div id="contactsContainer" class="contacts-grid">
+
+    </div>
+
+</section>
+
+<a href="addContacts.html" class="floating-btn">
+
+    <i class="fa-solid fa-plus"></i>
+
+</a>
+
+<script src="../js/contactCard.js"></script>
+<script src="../js/contacts.js"></script>
+<script src="../js/toast.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>

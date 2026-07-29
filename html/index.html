@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ContactHub — Manage Your Contacts Smarter</title>
+  <meta name="description" content="ContactHub helps you store, organize and access every contact securely from one clean, unified place.">
+
+  <!-- Google Fonts: Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/toast.css">
+</head>
+<body>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-container">
+
+      <a href="#top" class="nav-logo" aria-label="ContactHub home">
+        <span class="nav-logo-icon"><i class="fa-solid fa-address-book"></i></span>
+        <span class="nav-logo-text">ContactHub</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#top" class="nav-link is-active">Home</a></li>
+        <li><a href="#features" class="nav-link">Features</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+      </ul>
+
+      <div class="nav-actions">
+    <a href="/html/login.html" class="btn btn-ghost">Login</a>
+
+    <a href="/html/signup.html" class="btn btn-primary btn-small">
+        Sign Up
+    </a>
+</div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navLinks">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+    </nav>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="hero-bg" aria-hidden="true"></div>
+
+      <div class="hero-container">
+
+        <div class="hero-content reveal">
+          <p class="eyebrow">Contact management, simplified</p>
+          <h1 class="hero-title">
+            Manage Your Contacts <span class="text-accent">Smarter.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Store, organize and access your contacts securely from one place —
+            built for people who'd rather spend time on relationships than spreadsheets.
+          </p>
+
+          <div class="hero-actions">
+            <a href="/html/signup.html" class="btn btn-primary btn-large ripple">
+              Get Started
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            <a href="#about" class="btn btn-outline btn-large">
+              Learn More
+            </a>
+          </div>
+
+          <div class="hero-trust">
+            <div class="hero-trust-avatars" aria-hidden="true">
+              <span class="trust-avatar avatar-1"></span>
+              <span class="trust-avatar avatar-2"></span>
+              <span class="trust-avatar avatar-3"></span>
+            </div>
+            <p>Trusted by teams who take their contacts seriously</p>
+          </div>
+        </div>
+
+        <div class="hero-illustration reveal" aria-hidden="true">
+
+          <!-- Signature illustration: fanned contact card deck -->
+          <div class="card-deck">
+
+            <div class="deck-card deck-card--back">
+              <div class="deck-avatar deck-avatar--rose"></div>
+              <div class="deck-lines">
+                <span class="deck-line deck-line--title"></span>
+                <span class="deck-line deck-line--sub"></span>
+              </div>
+            </div>
+
+            <div class="deck-card deck-card--mid">
+              <div class="deck-avatar deck-avatar--teal"></div>
+              <div class="deck-lines">
+                <span class="deck-line deck-line--title"></span>
+                <span class="deck-line deck-line--sub"></span>
+              </div>
+              <div class="deck-tag deck-tag--fav"><i class="fa-solid fa-star"></i></div>
+            </div>
+
+            <div class="deck-card deck-card--front">
+              <div class="deck-card-top">
+                <div class="deck-avatar deck-avatar--indigo">JR</div>
+                <div class="deck-lines">
+                  <span class="deck-line deck-line--title" style="width:64%"></span>
+                  <span class="deck-line deck-line--sub" style="width:42%"></span>
+                </div>
+              </div>
+              <div class="deck-divider"></div>
+              <div class="deck-card-row"><i class="fa-solid fa-envelope"></i><span class="deck-line deck-line--sm"></span></div>
+              <div class="deck-card-row"><i class="fa-solid fa-phone"></i><span class="deck-line deck-line--sm" style="width:50%"></span></div>
+              <div class="deck-group-pills">
+                <span class="deck-pill">Work</span>
+                <span class="deck-pill deck-pill--muted">Design</span>
+              </div>
+            </div>
+
+            <div class="deck-float deck-float--search">
+              <i class="fa-solid fa-magnifying-glass"></i>
+              <span>Search contacts…</span>
+            </div>
+
+            <div class="deck-float deck-float--check">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features" id="features">
+      <div class="section-container">
+
+        <div class="section-heading reveal">
+          <p class="eyebrow">What's inside</p>
+          <h2>Everything You Need</h2>
+          <p class="section-subtitle">A focused toolkit for keeping every relationship organized, findable and safe.</p>
+        </div>
+
+        <div class="features-grid">
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fa-solid fa-address-card"></i>
+            </div>
+            <h3>Contact Management</h3>
+            <p>Add, edit and organize every contact in one clean, unified workspace.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <h3>Favorites</h3>
+            <p>Pin the people you reach out to most so they're always one tap away.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fa-solid fa-layer-group"></i>
+            </div>
+            <h3>Groups</h3>
+            <p>Sort contacts into groups like Work, Family or Clients for faster access.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>Search</h3>
+            <p>Find anyone instantly with fast, forgiving search across every field.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <h3>Dashboard Analytics</h3>
+            <p>See how your address book grows and where your attention goes.</p>
+          </article>
+
+          <article class="feature-card reveal">
+            <div class="feature-icon">
+              <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3>Secure Authentication</h3>
+            <p>Your data stays yours, protected by modern, encrypted authentication.</p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ ABOUT ============ -->
+    <section class="about" id="about">
+      <div class="section-container about-container">
+
+        <div class="about-visual reveal" aria-hidden="true">
+          <div class="about-glass-panel">
+            <div class="about-stat-row">
+              <i class="fa-solid fa-users"></i>
+              <div class="deck-lines">
+                <span class="deck-line deck-line--title" style="width:70%"></span>
+                <span class="deck-line deck-line--sub" style="width:45%"></span>
+              </div>
+            </div>
+            <div class="about-stat-row">
+              <i class="fa-solid fa-folder-open"></i>
+              <div class="deck-lines">
+                <span class="deck-line deck-line--title" style="width:55%"></span>
+                <span class="deck-line deck-line--sub" style="width:38%"></span>
+              </div>
+            </div>
+            <div class="about-stat-row">
+              <i class="fa-solid fa-shield-halved"></i>
+              <div class="deck-lines">
+                <span class="deck-line deck-line--title" style="width:60%"></span>
+                <span class="deck-line deck-line--sub" style="width:30%"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-content reveal">
+          <p class="eyebrow">Why ContactHub</p>
+          <h2>Built to stay out of your way</h2>
+
+          <p>
+            ContactHub brings every contact into one easy to manage space, so nothing important
+            gets lost in a scattered spreadsheet or an overflowing phone. It's designed to feel
+            simple from the first click, whether you're adding one person or importing hundreds.
+          </p>
+
+          <p>
+            Every entry is protected by secure authentication, and every list stays organized
+            with groups, favorites and fast search working together. The result is an experience
+            that feels light, responsive and genuinely easy to use, on any device.
+          </p>
+
+          <ul class="about-list">
+            <li><i class="fa-solid fa-check"></i> Easy to manage from day one</li>
+            <li><i class="fa-solid fa-check"></i> Secure by default, always encrypted</li>
+            <li><i class="fa-solid fa-check"></i> Organized with groups and favorites</li>
+            <li><i class="fa-solid fa-check"></i> Fully responsive on every screen</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ STATISTICS ============ -->
+    <section class="stats" id="stats">
+      <div class="section-container">
+        <div class="stats-grid">
+
+          <div class="stat-item reveal">
+            <span class="stat-number" data-target="1000" data-suffix="+">0</span>
+            <p class="stat-label">Contacts Managed</p>
+          </div>
+
+          <div class="stat-item reveal">
+            <span class="stat-number" data-target="99" data-suffix="%">0</span>
+            <p class="stat-label">User Satisfaction</p>
+          </div>
+
+          <div class="stat-item reveal">
+            <span class="stat-number" data-static="24/7">0</span>
+            <p class="stat-label">Access</p>
+          </div>
+
+          <div class="stat-item reveal">
+            <span class="stat-number" data-target="100" data-suffix="%">0</span>
+            <p class="stat-label">Secure Authentication</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CALL TO ACTION ============ -->
+    <section class="cta">
+      <div class="section-container">
+        <div class="cta-card reveal">
+          <h2>Ready to organize your contacts?</h2>
+          <p>Join ContactHub today and bring every relationship into one secure, simple place.</p>
+          <a href="/html/signup.html" class="btn btn-primary btn-large ripple">
+            Create Free Account
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="section-container footer-container">
+
+      <div class="footer-brand">
+        <a href="#top" class="nav-logo">
+          <span class="nav-logo-icon"><i class="fa-solid fa-address-book"></i></span>
+          <span class="nav-logo-text">ContactHub</span>
+        </a>
+        <p>A calmer way to keep every contact organized, secure and within reach.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#top">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <a href="/html/login.html">Login</a>
+        </ul>
+      </div>
+
+      <div class="footer-contact">
+        <h4>Contact</h4>
+        <ul>
+          <li><i class="fa-solid fa-envelope"></i> contacthub@gmail.com </li>
+          <li><i class="fa-solid fa-phone"></i> 8652568259 </li>
+          <li><i class="fa-solid fa-location-dot"></i> SIES GST, Navi Mumbai</li>
+        </ul>
+      </div>
+
+      <div class="footer-social">
+        <h4>Follow</h4>
+        <div class="social-icons">
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-x-twitter"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="https://github.com/yunuskhan2007"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub">
+              <i class="fa-brands fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> ContactHub. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="../js/script.js"></script>
+  <script src="../js/toast.js"></script>
+</body>
+</html>

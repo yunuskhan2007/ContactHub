@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Favorites | ContactHub</title>
+
+    <link rel="stylesheet"
+          href="../css/style.css">
+
+    <link rel="stylesheet"
+          href="../css/dashboard.css">
+
+    <link rel="stylesheet"
+          href="../css/contacts.css">
+
+    <link rel="stylesheet"
+          href="../css/favorites.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+          rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="../css/toast.css">
+
+
+</head>
+
+<body>
+
+     <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-address-book"></i>
+
+            <span>ContactHub</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+                <a href="dashboard.html">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="contacts.html">
+                    <i class="fa-solid fa-address-book"></i>
+                    Contacts
+                </a>
+            </li>
+
+            <li class ="active">
+                <a href="favorites.html">
+                    <i class="fa-solid fa-star"></i>
+                    Favorites
+                </a>
+            </li>
+
+            <li>
+                <a href="groups.html">
+                    <i class="fa-solid fa-users"></i>
+                    Groups
+                </a>
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Companies
+                </a>
+            </li>
+
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Settings
+                </a>
+            </li>
+
+        </ul>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ===========================
+         MAIN CONTENT
+    ============================ -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>
+
+                    <i class="fa-solid fa-star"></i>
+
+                    Favorites
+
+                </h1>
+
+                <p>
+
+                    Manage all your favorite contacts.
+
+                </p>
+
+            </div>
+
+            <div class="header-right">
+
+                <a href="addContacts.html"
+                   class="btn btn-primary">
+
+                    <i class="fa-solid fa-plus"></i>
+
+                    Add Contact
+
+                </a>
+
+            </div>
+
+        </header>
+
+        <!-- Stats -->
+
+        <section class="favorite-stats">
+
+            <div class="favorite-card">
+
+                <div class="favorite-icon">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </div>
+
+                <div class="favorite-info">
+
+                    <h2 id="favoriteCount">
+
+                        18
+
+                    </h2>
+
+                    <p>
+
+                        Favorite Contacts
+
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Toolbar -->
+
+        <section class="contacts-toolbar">
+
+            <div class="toolbar-left">
+
+                <div class="search-box">
+
+                    <i class="fa-solid fa-magnifying-glass"></i>
+
+                    <input
+                        type="text"
+                        id="contactSearch"
+                        placeholder="Search favorite contact...">
+
+                </div>
+
+            </div>
+
+            
+
+        </section>
+
+        <!-- Filter Buttons -->
+
+        <div class="toolbar-left">
+
+            <button class="filter-btn active">
+
+                All
+
+            </button>
+
+            <button class="filter-btn">
+
+                Friends
+
+            </button>
+
+            <button class="filter-btn">
+
+                Family
+
+            </button>
+
+            <button class="filter-btn">
+
+                Work
+
+            </button>
+
+            <button class="filter-btn">
+
+                Clients
+
+            </button>
+
+            <button class="filter-btn">
+
+                Others
+
+            </button>
+
+        </div>
+
+        <!-- FAVORITES CONTAINER START -->
+
+        <div
+            class="contacts-grid"
+            id="favoritesContainer">
+
+        </div>
+
+        <!-- Empty State -->
+
+        <section
+            class="empty-state"
+            id="emptyState">
+
+            <i class="fa-solid fa-star"></i>
+
+            <h2>
+
+                No Favorite Contacts
+
+            </h2>
+
+            <p>
+
+                Mark contacts as favorite to see them here.
+
+            </p>
+
+        </section>
+
+    </main>
+
+    <!-- Floating Button -->
+
+    <a
+        href="addContacts.html"
+        class="floating-btn">
+
+        <i class="fa-solid fa-plus"></i>
+
+    </a>
+
+    <!-- JavaScript -->
+
+    <script src="../js/contactCard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="../js/favorites.js"></script>
+    <script src="../js/toast.js"></script>
+
+</body>
+
+</html>

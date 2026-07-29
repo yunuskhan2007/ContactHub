@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>View Contact | ContactHub</title>
+
+     <link rel="stylesheet" href="../css/style.css">
+<link rel="stylesheet" href="../css/dashboard.css">
+<link rel="stylesheet" href="../css/viewContacts.css">
+<link rel="stylesheet" href="../css/toast.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <i class="fa-solid fa-address-book"></i>
+
+            <span>ContactHub</span>
+
+        </div>
+
+        <ul class="sidebar-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    Dashboard
+
+                </a>
+
+            </li>
+
+            <li class="active">
+
+                <a href="contacts.html">
+
+                    <i class="fa-solid fa-address-book"></i>
+
+                    Contacts
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="favorites.html">
+
+                    <i class="fa-solid fa-star"></i>
+
+                    Favorites
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="groups.html">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    Groups
+
+                </a>
+
+            </li>
+            <li>
+                <a href="settings.html">
+                    <i class="fa-solid fa-gear"></i>
+                    Companies
+                </a>
+            </li>
+
+            <li>
+
+                <a href="settings.html">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                    Settings
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <div class="sidebar-bottom">
+
+            <a href="login.html" class="logout">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>Contact Details</h1>
+
+                <p>View and manage contact information.</p>
+
+            </div>
+
+            <div class="header-right">
+
+                <a href="contacts.html" class="btn btn-secondary">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Back
+
+                </a>
+
+                <a
+    href="#"
+    class="btn btn-primary"
+    id="editBtn">
+
+    <i class="fa-solid fa-pen"></i>
+
+    Edit Contact
+
+</a>
+
+            </div>
+
+        </header>
+
+        <!-- Profile Card -->
+
+        <section class="profile-card">
+
+            <img id="contactImage"
+                src=""
+                alt="Contact">
+
+            <h2 id="contactName"></h2>
+
+            <span
+                id="contactGroupBadge"
+                class="group-badge">
+
+                </span>
+
+            <div class="profile-actions">
+
+                <button title="Call">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                </button>
+
+                <button title="Email">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                </button>
+
+                <button title="Favorite">
+
+                    <i class="fa-solid fa-star"></i>
+
+                </button>
+
+                <button title="Delete">
+
+                    <i class="fa-solid fa-trash"></i>
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Details -->
+
+        <section class="details-grid">
+
+            <div class="info-card">
+
+                <h3>
+
+                    Contact Information
+
+                </h3>
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-phone"></i>
+
+                    <div>
+
+                        <label>Phone</label>
+
+                        <p id="contactPhone"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <div>
+
+                        <label>Email</label>
+
+                        <p id="contactEmail"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-location-dot"></i>
+
+                    <div>
+
+                        <label>Address</label>
+
+                        <p id="contactAddress"></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+                        <!-- Professional Information -->
+
+            <div class="info-card">
+
+                <h3>
+
+                    Professional Information
+
+                </h3>
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-building"></i>
+
+                    <div>
+
+                        <label>Company</label>
+
+                        <p id="contactCompany"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-briefcase"></i>
+
+                    <div>
+
+                        <label>Job Title</label>
+
+                        <p id="contactJob"></p>
+
+                    </div>
+
+                </div>
+
+                <div class="info-item">
+
+                    <i class="fa-solid fa-users"></i>
+
+                    <div>
+
+                        <label>Group</label>
+
+                        <p id="contactGroup"></p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Notes -->
+
+            <div class="info-card">
+
+                <h3>
+
+                    Notes
+
+                </h3>
+
+                <p
+                    class="notes"
+                    id="contactNotes">
+
+                 </p>
+
+            </div>
+
+           
+        </section>
+
+    </main>
+
+    <!-- Floating Edit Button -->
+
+    <a
+        href="#"
+        class="floating-btn"
+        id="floatingEditBtn">
+
+        <i class="fa-solid fa-pen"></i>
+
+    </a>
+
+    <!-- Delete Modal -->
+
+    <div class="delete-modal" id="deleteModal">
+
+        <div class="modal-content">
+
+            <h2>
+
+                Delete Contact?
+
+            </h2>
+
+            <p>
+
+                This action cannot be undone.
+
+            </p>
+
+            <div class="modal-buttons">
+
+                <button class="btn btn-secondary"
+                    id="cancelDelete">
+
+                    Cancel
+
+                </button>
+
+                <button class="btn btn-danger"
+                    id="confirmDelete">
+
+                    Delete
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <script src="../js/viewContacts.js"></script>
+    <script src="../js/toast.js"></script>
+
+</body>
+
+</html>

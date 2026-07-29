@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Settings | ContactHub</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <link rel="stylesheet" href="../css/settings.css">
+    <link rel="stylesheet" href="../css/toast.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- Sidebar -->
+
+    <aside class="sidebar">
+
+        <div>
+
+            <div class="logo">
+
+                <i class="fa-solid fa-address-book"></i>
+
+                <span>ContactHub</span>
+
+            </div>
+
+            <ul class="sidebar-menu">
+
+                <li>
+
+                    <a href="dashboard.html">
+
+                        <i class="fa-solid fa-house"></i>
+
+                        Dashboard
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="contacts.html">
+
+                        <i class="fa-solid fa-user-group"></i>
+
+                        Contacts
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="favorites.html">
+
+                        <i class="fa-solid fa-star"></i>
+
+                        Favorites
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="groups.html">
+
+                        <i class="fa-solid fa-layer-group"></i>
+
+                        Groups
+
+                    </a>
+
+                </li>
+
+                <li>
+
+                    <a href="companies.html">
+
+                        <i class="fa-solid fa-building"></i>
+
+                        Companies
+
+                    </a>
+
+                </li>
+
+                <li class="active">
+
+                    <a href="settings.html">
+
+                        <i class="fa-solid fa-gear"></i>
+
+                        Settings
+
+                    </a>
+
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div class="sidebar-bottom">
+
+            <a class="logout" href="login.html">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                Logout
+
+            </a>
+
+        </div>
+
+    </aside>
+
+    <!-- Main Content -->
+
+    <main class="main-content">
+
+        <!-- Header -->
+
+        <header class="dashboard-header">
+
+            <div class="header-left">
+
+                <h1>Settings</h1>
+
+                <p>Manage your account settings.</p>
+
+            </div>
+
+        </header>
+
+        <!-- Profile -->
+
+        <section class="settings-card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-user"></i>
+
+                <h2>Profile</h2>
+
+            </div>
+
+            <div class="profile-area">
+
+                <div class="profile-image">
+
+                    <img id="profilePreview"
+                        src="https://ui-avatars.com/api/?name=User&background=4F46E5&color=fff"
+                        alt="Profile">
+
+                    <input
+                        type="file"
+                        id="profileImage"
+                        accept="image/*"
+                        hidden>
+
+                    <button
+                        id="uploadBtn"
+                        type="button"
+                        class="btn btn-secondary">
+
+                        <i class="fa-solid fa-camera"></i>
+
+                        Change Photo
+
+                    </button>
+
+                    <button
+                        id="deleteImageBtn"
+                        type="button"
+                        class="btn btn-danger">
+
+                        <i class="fa-solid fa-trash"></i>
+
+                        Remove Photo
+
+                    </button>
+
+                </div>
+
+                <div class="profile-details">
+
+                    <div class="form-group">
+
+                        <label>Full Name</label>
+
+                        <input
+                            id="fullName"
+                            type="text">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Email</label>
+
+                        <input
+                            id="email"
+                            type="email"
+                            readonly>
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Phone Number</label>
+
+                        <input
+                            id="phone"
+                            type="text">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>Address</label>
+
+                        <input
+                            id="address"
+                            type="text">
+
+                    </div>
+
+                    <div class="form-group">
+
+                        <label>About</label>
+
+                        <textarea
+                            id="about"
+                            rows="5"></textarea>
+
+                    </div>
+
+                    <button
+                        id="saveProfile"
+                        class="btn btn-primary">
+
+                        <i class="fa-solid fa-floppy-disk"></i>
+
+                        Save Changes
+
+                    </button>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Change Password -->
+
+        <section class="settings-card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-lock"></i>
+
+                <h2>Change Password</h2>
+
+            </div>
+
+            <div class="form-group">
+
+    <label>Current Password</label>
+
+    <div class="password-box">
+
+        <input
+            id="currentPassword"
+            type="password">
+
+        <i
+            id="toggleCurrentPassword"
+            class="fa-solid fa-eye"></i>
+
+    </div>
+
+</div>
+
+                <div class="form-group">
+
+    <label>New Password</label>
+
+    <div class="password-box">
+
+        <input
+            id="newPassword"
+            type="password">
+
+        <i
+            id="toggleNewPassword"
+            class="fa-solid fa-eye"></i>
+
+    </div>
+
+</div>
+
+<div class="form-group">
+
+    <label>Confirm Password</label>
+
+    <div class="password-box">
+
+        <input
+            id="confirmPassword"
+            type="password">
+
+        <i
+            id="toggleConfirmPassword"
+            class="fa-solid fa-eye"></i>
+
+    </div>
+
+</div>
+
+                <button
+                    id="changePassword"
+                    class="btn btn-primary">
+
+                    <i class="fa-solid fa-key"></i>
+
+                    Update Password
+
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- About -->
+
+        <section class="settings-card">
+
+            <div class="section-title">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                <h2>About ContactHub</h2>
+
+            </div>
+
+            <div class="about-content">
+
+                <p>
+
+                    <strong>Application:</strong>
+
+                    ContactHub
+
+                </p>
+
+                <p>
+
+                    <strong>Version:</strong>
+
+                    1.0
+
+                </p>
+
+                <p>
+
+                    <strong>Description:</strong>
+
+                    ContactHub is a modern contact management system built using
+                    HTML, CSS, JavaScript, Node.js, Express, MongoDB and
+                    Cloudinary.
+
+                </p>
+
+                <p>
+
+                    <strong>Developer:</strong>
+
+                    ContactHub Team
+
+                </p>
+
+                <p>
+
+                    © 2026 ContactHub. All Rights Reserved.
+
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <script src="../js/toast.js"></script>
+    <script src="../js/settings.js"></script>
+
+</body>
+
+</html>
