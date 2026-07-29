@@ -4,7 +4,7 @@ if (!token) {
     window.location.href = "login.html";
 }
 
-const API_URL = "http://localhost:3000/api/users";
+const API_URL = "https://contacthub-4si7.onrender.com/api";
 
 const profilePreview = document.getElementById("profilePreview");
 const profileImage = document.getElementById("profileImage");
@@ -177,8 +177,7 @@ if (deleteBtn) {
 
     deleteBtn.addEventListener("click", async () => {
 
-        const response = await fetch(
-            "http://localhost:3000/api/users/profile-image",
+        const response = await fetch("https://contacthub-4si7.onrender.com/api/users/profile-image",
             {
                 method: "DELETE",
                 headers: {

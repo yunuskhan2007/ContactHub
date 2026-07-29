@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:3000/api/contacts";
+const API_URL = "https://contacthub-4si7.onrender.com/api";
 let allFavorites = [];
 const token = localStorage.getItem("token");
 

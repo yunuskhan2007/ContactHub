@@ -2,7 +2,7 @@
    ContactHub Authentication
 =========================================== */
 
-const API_URL = "http://localhost:3000/api/auth";
+const API_URL = "https://contacthub-4si7.onrender.com/api";
 
 /* ===========================================
    VALIDATION HELPERS

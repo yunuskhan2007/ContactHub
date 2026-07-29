@@ -35,7 +35,7 @@ async function loadCompanies() {
     try {
 
         const response = await fetch(
-            "http://localhost:3000/api/contacts",
+            "https://contacthub-4si7.onrender.com/api/contacts",
             {
                 headers: {
                     Authorization: `Bearer ${token}`

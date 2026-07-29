@@ -3,7 +3,7 @@
 =========================================== */
 
 const token = localStorage.getItem("token");
-const API_URL = "http://localhost:3000/api/dashboard";
+const API_URL = "https://contacthub-4si7.onrender.com/api";
 
 if (!token) {
     window.location.href = "login.html";
@@ -291,7 +291,7 @@ async function exportContacts() {
 
     try {
 
-        const response = await fetch("http://localhost:3000/api/contacts", {
+        const response = await fetch("https://contacthub-4si7.onrender.com/api/contacts", {
 
             headers: {
                 Authorization: `Bearer ${token}`

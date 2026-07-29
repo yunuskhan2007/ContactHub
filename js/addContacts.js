@@ -1,7 +1,7 @@
 // ===============================
 // ELEMENTS
 // ===============================
-const API_URL = "http://localhost:3000/api/contacts";
+const API_URL = "https://contacthub-4si7.onrender.com/api";
 const token = localStorage.getItem("token");
 const form = document.getElementById("contactForm");
 
