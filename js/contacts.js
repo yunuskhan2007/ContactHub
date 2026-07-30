@@ -1,8 +1,11 @@
 const API_URL = "https://contacthub-4si7.onrender.com/api/contacts";
-const token = localStorage.getItem("token");
+const token =
+localStorage.getItem("token") ||
+sessionStorage.getItem("token");
 const params = new URLSearchParams(window.location.search);
 const selectedGroup = params.get("group");
 const selectedCompany = params.get("company");
+let currentFilter = "all";
 /* ===========================================
    ContactHub - Contacts
 =========================================== */
@@ -116,8 +119,9 @@ function initFilters() {
 
             button.classList.add("active");
 
-            // MongoDB connect hone ke baad
-            // actual filtering yaha hogi.
+            currentFilter = button.dataset.filter;
+
+            loadContacts();
 
         });
 
@@ -341,6 +345,17 @@ async function loadContacts() {
         }
 
         let contacts = data.contacts;
+        if (currentFilter !== "all") {
+
+    contacts = contacts.filter(contact =>
+
+        contact.group &&
+        contact.group.toLowerCase() ===
+        currentFilter.toLowerCase()
+
+    );
+
+}
         const sortOption =
     document.getElementById("sortContacts")?.value || "recent";
 
@@ -368,15 +383,15 @@ else {
 
 }
 
-        if (selectedGroup) {
+        if (selectedGroup && currentFilter === "all") {
 
-            contacts = contacts.filter(contact =>
-                contact.group &&
-                contact.group.toLowerCase() === selectedGroup.toLowerCase()
-            );
+    contacts = contacts.filter(contact =>
+        contact.group &&
+        contact.group.toLowerCase() === selectedGroup.toLowerCase()
+    );
 
-        }
-        if (selectedCompany) {
+}
+        if (selectedCompany && currentFilter === "all") {
 
     contacts = contacts.filter(contact =>
         contact.company &&
@@ -409,3 +424,4 @@ contacts.forEach(contact => {
     }
 
 }
+

@@ -29,6 +29,7 @@ if (exportBtn) {
     initNotifications();
     initCardHover();
     initProfile();
+    initEditButtons();
 
 });
 
@@ -157,10 +158,8 @@ function loadRecentContacts(contacts) {
 
                 <td>
 
-                    <button class="edit-btn">
-
-                        Edit
-
+                    <button class="edit-btn" data-id="${contact._id}">
+                            Edit
                     </button>
 
                 </td>
@@ -168,6 +167,22 @@ function loadRecentContacts(contacts) {
             </tr>
 
         `;
+
+    });
+
+}
+function initEditButtons() {
+
+    document.querySelectorAll(".edit-btn").forEach(button => {
+
+        button.addEventListener("click", () => {
+
+            const id = button.dataset.id;
+
+            window.location.href =
+                `editContact.html?id=${id}`;
+
+        });
 
     });
 
