@@ -347,9 +347,10 @@ async function loadContacts() {
 
     contacts = contacts.filter(contact =>
 
-        contact.group &&
-        contact.group.toLowerCase() ===
-        currentFilter.toLowerCase()
+        currentFilter === "favorites"
+            ? contact.favorite
+            : contact.group &&
+              contact.group.toLowerCase() === currentFilter.toLowerCase()
 
     );
 
